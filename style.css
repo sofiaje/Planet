@@ -11,9 +11,15 @@ a {
   text-decoration: none;
   color: #ddd4ce;
   padding: 1rem 0;
+  border-bottom: 1px solid transparent;
 }
 a:hover {
   color: hsl(14deg, 56%, 49%);
+  border-color: hsl(14deg, 56%, 49%);
+}
+
+.active-link {
+  border-color: white;
 }
 
 h1,
@@ -27,9 +33,13 @@ h4 {
 
 h1 {
   color: #ddd4ce;
-  font-size: 3rem;
-  padding: 1rem 0;
   border-bottom: 1px solid #ddd4ce;
+  padding: 1rem 0;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -116,7 +126,7 @@ header i {
   .primary-nav {
     position: fixed;
     z-index: 1000;
-    inset: 0 0 0 35%;
+    inset: 0 0 0 30%;
     flex-direction: column;
     padding: min(10vh, 10rem);
     background: hsla(0deg, 0%, 100%, 0.1);
@@ -144,4 +154,21 @@ header i {
 }
 img {
   width: 100%;
+}
+
+.img-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 130px;
+  max-height: 500px;
+}
+.img-flex img {
+  transform: scale(2);
+}
+@media (min-width: 768px) {
+  .img-flex img {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */
