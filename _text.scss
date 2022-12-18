@@ -1,0 +1,57 @@
+* {
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0.05rem;
+}
+a {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-family: "Cinzel", serif;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: $textColor;
+  padding: 1rem 0;
+  // border-bottom: 1px solid transparent;
+  &:hover {
+    color: $textHover;
+  }
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bellefair", serif;
+  font-weight: 100;
+  padding: 1rem 0;
+}
+h1 {
+  color: $textColor;
+  font-size: 3rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid $textColor;
+}
+p {
+  @include md {
+    columns: 2;
+    column-gap: 3rem;
+  }
+}
+
+footer {
+  p {
+    font-size: 0.6rem;
+    text-align: right;
+    columns: unset;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}
